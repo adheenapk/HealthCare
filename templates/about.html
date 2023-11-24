@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+    About Health Care
+{% endblock %}
+
+{% block content %}
+<style>
+    .about-container {
+        color: black /* Text color against the background image */
+        text-align: justify; /* Align text justified for better readability */
+        padding: 50px; /* Add padding for space between text and container edges */
+        line-height: 1.6; /* Adjust line height for better readability */
+    }
+</style>
+    <div class="about-container">
+        <style>
+            .attractive-heading {
+                font-family: Helvetica, sans-serif
+                font-size: 40px;
+                font-weight:bolder;
+                color:#008BB0; /* Replace with your desired color code */
+            }
+            .about-text{
+                font-family:Arial, sans-serif;
+            }
+        </style>
+        
+        <h1 class="text-center attractive-heading">Welcome to Health Care</h1>
+        <p class="about-text">
+            At Health Care, we are dedicated to providing compassionate and comprehensive healthcare services
+            to enhance the well-being of our community. Our commitment to excellence is reflected in the quality
+            of care we provide and the positive impact we aim to make on the lives of our patients.
+            Established with a vision of fostering a healthier community, Health Care has been a trusted
+            healthcare partner since [Year]. We take pride in our team of skilled and caring professionals
+            who work collaboratively to deliver personalized and patient-centered medical care.
+            Our state-of-the-art facilities are equipped with advanced technology, ensuring that our patients
+            receive the highest standard of medical services. From preventive care to specialized treatments,
+            we are here to meet your healthcare needs with expertise and empathy.
+            Thank you for choosing Health Care. Your health and well-being are at the heart of everything we do.
+            We look forward to serving you and your family and being your trusted healthcare partner.
+        </p>
+    </div>
+{% endblock %}

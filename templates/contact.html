@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+{% block content %}
+<style>
+
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 800px;
+        font-family: Arial, sans-serif;
+        font-size:15px;
+        margin-top:60px;
+        margin-left:400px; 
+    }
+
+    .contact-info-container,
+    .contact-form-container {
+        flex-basis: 48%;
+    }
+    
+    
+</style>
+    <div class="contact-container">
+        <div class="contact-info-container">
+            <style>
+                .attractive-heading {
+                    font-family: Helvetica, sans-serif
+                    font-size: 40px;
+                    font-weight:bolder;
+                    color:#008BB0; /* Replace with your desired color code */
+                }
+                .about-text{
+                    font-family:Arial, sans-serif;
+                }
+            </style>
+            
+            <h1 class="text-center attractive-heading">Contact Us</h1>
+            <p class="contact-intro">Have questions or concerns? Reach out to us! Our team is here to assist you.</p>
+
+            <div class="contact-info">
+                <h2 class="info-heading">Visit Our Office</h2>
+                <address>
+                    <p>Health Care Center</p>
+                    <p>123 Main Street</p>
+                    <p>Kerala, India</p>
+                </address>
+
+                <h2 class="info-heading">Contact Information</h2>
+                <p>Email: <a href="mailto:info@healthcare.com" class="contact-link">info@healthcare.com</a></p>
+                <p>Phone: <span class="contact-phone">+91-XXXXXXXXXX</span></p>
+            </div>
+        </div>
+<style>
+    .contact-form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .attractive-heading {
+        font-family: Helvetica, sans-serif
+        font-size: 40px;
+        font-weight:bolder;
+        color:#008BB0; /* Replace with your desired color code */
+    }
+    .about-text{
+        font-family:Arial, sans-serif;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    
+    .submit-button {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+    }
+    
+    .submit-button:hover {
+        background-color: #2980b9;
+    }
+    
+</style>
+<div class="contact-form-container">
+    <h2 class="text-center attractive-heading">Send us a Message</h2>
+    <form action="/submit-contact-form" method="post" class="contact-form">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Send Message</button>
+    </form>
+</div>
+</div>
+{% endblock %}

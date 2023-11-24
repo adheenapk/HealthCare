@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+booking
+{% endblock %}
+
+{% block content %}
+<style>
+  .attractive-heading {
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-bottom: 10px; /* Adjust the margin-bottom to change the gap */
+    color:#008BB0; /* Replace with your desired color code */
+  }
+
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    font-weight:bold;
+    background-color:#008BB0;
+  }
+
+  .your-form-class {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .your-form-class .form-group {
+    margin-bottom: 5px;
+  }
+
+  .your-form-class label {
+    margin-bottom: 5px;
+  }
+
+  .your-form-class input,
+  .your-form-class textarea {
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .your-form-class button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .your-form-class button:hover {
+    background-color: #2980b9;
+  }
+</style>
+
+<h1 class="text-center attractive-heading">Make an Appointment</h1>
+
+<div class="container w-50 height-40 text-center text-black my-5 p-3 border-warning rounded form-container">
+  <form method="post" action="" class="your-form-class my-2">
+    <div class="form-group">
+      {% csrf_token %}
+      {{ form.as_p }}
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="Submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

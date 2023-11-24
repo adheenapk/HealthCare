@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+department
+{%endblock%}
+
+{% block content %}
+<style>
+    .attractive-heading {
+        font-family: Helvetica, sans-serif
+        font-size: 40px;
+        font-weight:bolder;
+        color:#008BB0; /* Replace with your desired color code */
+    }
+</style>
+
+<h1 class="text-center attractive-heading">Our Departments</h1>
+{%for d in dept %}
+<style>
+    .custom-box {
+        background-color:#008BB0;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin: 50px auto;
+        border: 2px solid #yourCustomColor;
+        border-radius: 10px;
+    }
+</style>
+<div class='mx-auto w-50 custom-box'>
+    <h1>{{d.dep_name}}</h1>
+    <h6>{{d.dep_description}}</h6>
+</div>
+{% endfor %}
+{%endblock%}
